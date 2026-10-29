@@ -1,174 +1,611 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-  <title>My Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080817">
 
-  <!-- FontAwesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta name="description"
+    content="Rishi Raj Boora — Full Stack Developer Intern at Ricoz Innovation, building web applications and exploring practical AI solutions.">
 
-  <!-- Custom CSS -->
+  <title>Rishi Raj Boora | Full Stack Developer</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Main stylesheet -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- GSAP animations -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Main JavaScript -->
+  <script defer src="script.js"></script>
 </head>
 
 <body>
 
-  <!-- Header Section -->
-<header class="header">
-  <div class="logo">Boora Rishi Raj</div>
+  <!-- Ambient background -->
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <div class="noise-overlay" aria-hidden="true"></div>
 
-  <!-- Hamburger Menu -->
-  <div class="menu-toggle" id="menu-toggle">
-    <i class="fas fa-bars"></i>
+  <!-- Navigation -->
+  <header class="header">
+    <a href="#hero" class="logo" aria-label="Rishi Raj Boora home">
+      <span class="logo-mark">&lt;/&gt;</span>
+      <span>Rishi Raj Boora</span>
+    </a>
+
+    <button class="menu-toggle"
+      id="menu-toggle"
+      type="button"
+      aria-label="Open navigation"
+      aria-expanded="false"
+      aria-controls="nav">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a class="nav-link active" href="#hero">Home</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#skills">Skills</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#resume">Resume</a>
+      <a class="nav-link nav-contact" href="#contact">Contact <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero section-shell" id="hero">
+
+      <div class="hero-content">
+
+        <div class="availability-badge reveal">
+          <span class="status-dot"></span>
+          <span>Currently working at Ricoz Innovation</span>
+        </div>
+
+        <p class="hero-eyebrow reveal">HELLO, WORLD! I'M</p>
+
+        <h1 class="hero-title reveal">
+          Rishi Raj<br>
+          <span class="gradient-text">Boora</span><span class="title-period"></span>
+        </h1>
+
+        <div class="hero-role reveal">
+          <span class="role-line"></span>
+          <span>Full Stack Developer Intern at Ricoz Innovation</span>
+        </div>
+
+        <p class="hero-description reveal">
+          I build web applications, explore AI-focused solutions, and turn
+          ideas into practical digital experiences. I enjoy working across
+          frontend, backend, and databases while continuously improving my
+          problem-solving and development skills.
+        </p>
+
+        <div class="hero-tags reveal">
+          <span><i class="fas fa-code"></i> Full Stack Development</span>
+          <span><i class="fas fa-brain"></i> AI & Machine Learning</span>
+          <span><i class="fas fa-layer-group"></i> Full Stack Applications</span>
+        </div>
+
+        <div class="hero-actions reveal">
+          <a href="#resume" class="button button-secondary">
+            <i class="fas fa-file-lines"></i> View Resume
+          </a>
+        </div>
+
+        <div class="hero-socials reveal">
+          <span>FIND ME ON</span>
+
+          <a href="https://github.com/Rishi1930"
+            target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/boora-rishiraj"
+            target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+
+          <a href="mailto:rishiraj.boora1@gmail.com"
+            aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Animated portrait placeholder: add your photo later -->
+      <div class="hero-visual reveal" id="hero-visual">
+
+        <div class="visual-grid" aria-hidden="true"></div>
+        <div class="visual-glow" aria-hidden="true"></div>
+
+        <div class="orbit orbit-one" aria-hidden="true">
+          <span class="orbit-node node-one"></span>
+          <span class="orbit-node node-two"></span>
+        </div>
+
+        <div class="orbit orbit-two" aria-hidden="true">
+          <span class="orbit-node node-three"></span>
+        </div>
+
+        <div class="orbit orbit-three" aria-hidden="true"></div>
+
+<div class="portrait-frame">
+  <div class="portrait-placeholder" id="portrait-placeholder">
+    <img
+      class="portrait-image"
+      src="assets/Potrait.png"
+      alt="Rishi Raj Boora"
+    >
+  </div>
+</div>
+
+        <div class="floating-chip chip-code" aria-hidden="true">
+          <i class="fas fa-code"></i>
+          <span>CODE</span>
+        </div>
+
+        <div class="floating-chip chip-ai" aria-hidden="true">
+          <i class="fas fa-brain"></i>
+          <span>AI</span>
+        </div>
+
+        <div class="floating-chip chip-three" aria-hidden="true">
+          <i class="fas fa-cube"></i>
+          <span>3D</span>
+        </div>
+
+        <div class="visual-caption">
+          <span class="caption-dot"></span>
+          <span>BUILDING WHAT'S NEXT</span>
+        </div>
+
+      </div>
+
+      <a class="scroll-indicator" href="#about">
+        <span>SCROLL TO EXPLORE</span>
+        <i class="fas fa-arrow-down"></i>
+      </a>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="about section-shell section-spacing" id="about">
+
+      <div class="section-heading reveal">
+        <span class="section-kicker">01 / ABOUT ME</span>
+        <h2>Ideas into <span class="gradient-text">applications.</span></h2>
+        <p>A little about who I am and what I build.</p>
+      </div>
+
+      <div class="about-layout">
+
+        <article class="about-card glass-card reveal">
+          <div class="card-topline">
+            <span class="card-label">MY STORY</span>
+            <i class="fas fa-fingerprint"></i>
+          </div>
+
+          <h3>I'm a <span class="gradient-text">Full Stack Developer</span></h3>
+
+          <p>
+            I'm Rishi Raj Boora, a developer focused on full-stack application
+            development and practical AI projects. I enjoy bringing together
+            user interfaces, backend functionality, databases, and thoughtful
+            product workflows to build useful digital experiences.
+          </p>
+
+          <p>
+            I'm currently working as a
+            <strong>Full Stack Developer Intern at Ricoz Innovation</strong>,
+            where I'm gaining hands-on experience and strengthening my ability
+            to build and improve web applications.
+          </p>
+
+          <p>
+            My projects include ProofHire, an AI museum experience, an AI travel
+            planner, and a machine learning classification project. I use
+            developer tools and AI-assisted workflows to support development,
+            while focusing on understanding the code, debugging issues, and
+            learning through implementation.
+          </p>
+
+          <div class="about-facts">
+            <div class="fact">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <span>EDUCATION</span>
+                <strong>B.Tech, CSE — AI & ML</strong>
+              </div>
+            </div>
+
+            <div class="fact">
+              <i class="fas fa-briefcase"></i>
+              <div>
+                <span>CURRENT ROLE</span>
+                <strong>Full Stack Developer Intern</strong>
+                <small>Ricoz Innovation</small>
+              </div>
+            </div>
+
+            <div class="fact">
+              <i class="fas fa-location-dot"></i>
+              <div>
+                <span>BASED IN</span>
+                <strong>Hyderabad, India</strong>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="about-services">
+
+          <article class="service-card glass-card reveal">
+            <div class="service-icon"><i class="fas fa-code"></i></div>
+            <div>
+              <h3>Full Stack Development</h3>
+              <p>Building user interfaces, backend services, and database-driven applications.</p>
+            </div>
+            <span class="service-number">01</span>
+          </article>
+
+          <article class="service-card glass-card reveal">
+            <div class="service-icon"><i class="fas fa-brain"></i></div>
+            <div>
+              <h3>AI Integration</h3>
+              <p>Exploring practical AI use cases and building AI-focused project experiences.</p>
+            </div>
+            <span class="service-number">02</span>
+          </article>
+
+          <article class="service-card glass-card reveal">
+            <div class="service-icon"><i class="fas fa-cube"></i></div>
+            <div>
+              <h3>Interactive 3D Experiences</h3>
+              <p>Creating immersive web experiences using Three.js and React Three Fiber.</p>
+            </div>
+            <span class="service-number">03</span>
+          </article>
+
+          <article class="service-card glass-card reveal">
+            <div class="service-icon"><i class="fas fa-terminal"></i></div>
+            <div>
+              <h3>Problem Solving</h3>
+              <p>Debugging issues, refining implementations, and turning requirements into working software.</p>
+            </div>
+            <span class="service-number">04</span>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="skills section-shell section-spacing" id="skills">
+
+      <div class="section-heading reveal">
+        <span class="section-kicker">02 / TECH STACK</span>
+        <h2>Tools of my <span class="gradient-text">trade.</span></h2>
+        <p>Technologies I've worked with across my projects.</p>
+      </div>
+
+      <div class="skills-grid">
+
+        <article class="skill-card glass-card reveal">
+          <div class="skill-icon"><i class="fas fa-window-maximize"></i></div>
+          <h3>Frontend Development</h3>
+          <p>HTML5, CSS3, JavaScript, React.js, TypeScript, Responsive Web Design</p>
+          <div class="skill-accent"></div>
+        </article>
+
+        <article class="skill-card glass-card reveal">
+          <div class="skill-icon"><i class="fas fa-server"></i></div>
+          <h3>Backend Development</h3>
+          <p>Node.js, REST APIs, Authentication and Authorization</p>
+          <div class="skill-accent"></div>
+        </article>
+
+        <article class="skill-card glass-card reveal">
+          <div class="skill-icon"><i class="fas fa-database"></i></div>
+          <h3>Databases</h3>
+          <p>PostgreSQL, Supabase, MongoDB, Row Level Security (RLS)</p>
+          <div class="skill-accent"></div>
+        </article>
+
+        <article class="skill-card glass-card reveal">
+          <div class="skill-icon"><i class="fas fa-brain"></i></div>
+          <h3>AI & Machine Learning</h3>
+          <p>Python, Machine Learning Model Development</p>
+          <div class="skill-accent"></div>
+        </article>
+
+        <article class="skill-card glass-card reveal">
+          <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+          <h3>Developer Tools & AI Assistants</h3>
+          <p>Git & GitHub, Visual Studio Code, GitHub Copilot, OpenAI Codex, Claude Code, ChatGPT, Vite</p>
+          <div class="skill-accent"></div>
+        </article>
+
+        <article class="skill-card glass-card reveal">
+          <div class="skill-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3>Core Competencies</h3>
+          <p>Problem Solving, Full Stack Application Development, AI-Assisted Software Development</p>
+          <div class="skill-accent"></div>
+        </article>
+
+      </div>
+    </section>
+
+
+<!-- PROJECTS -->
+
+<section class="projects section-shell section-spacing" id="projects">
+
+  <div class="section-heading reveal">
+    <span class="section-kicker">03 / SELECTED WORK</span>
+    <h2>Things I've <span class="gradient-text">built.</span></h2>
+    <p>Projects where software, experimentation, and ideas come together.</p>
   </div>
 
-  <nav class="nav" id="nav">
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <div class="projects-grid">
 
+    <!-- PROJECT 1: AI MUSEUM -->
+    <article class="project-card glass-card reveal">
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="hero-content">
-      <div class="hero-icons">
-        <i class="fas fa-code"></i>
-        <i class="fas fa-user"></i>
-        <i class="fas fa-laptop-code"></i>
+      <div class="project-visual museum-visual">
+        <img src="assets\ai-museum.jpg"
+             alt="AI-enhanced 3D cultural museum"
+             style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
+
+        <span class="project-index">PROJECT / 01</span>
+        <span class="project-category">3D + AI</span>
       </div>
-      <h1 class="hero-title">Welcome To My</h1>
-      <h2 class="hero-subtitle">Portfolio Website</h2>
-      <p class="hero-link">© Boora Rishi Raj</p>
-    </div>
-  </section>
 
-  <!-- About Role Section -->
-  <section class="about-role" id="role">
-    <div class="role-container">
-      <div class="role-text">
-        <h2>I’m a <span class="highlight">Frontend Developer</span></h2>
+      <div class="project-content">
+        <div class="project-meta">
+          <span class="project-type">CULTURAL TECHNOLOGY</span>
+          <i class="fas fa-arrow-up-right-from-square"></i>
+        </div>
+
+        <h3>AI-Enhanced 3D Cultural Museum</h3>
+
         <p>
-          I specialize in building modern, responsive, and interactive websites
-          using HTML, CSS, JavaScript, React, and more.
+          An interactive AI-focused museum concept designed to bring
+          cultural and historical content to life through an engaging
+          digital experience and interactive 3D presentation.
         </p>
-        <button class="explore-btn">Explore My Work</button>
-      </div>
-    </div>
-  </section>
 
-  <!-- About Section -->
-  <section class="about" id="about">
-    <div class="about-container">
-      <div class="about-image">
-       <img src="assets/Image.jpg" alt="My Photo">
+        <div class="tech-tags">
+          <span>React</span>
+          <span>TypeScript</span>
+          <span>Three.js</span>
+          <span>FastAPI</span>
+          <span>Gemini API</span>
+        </div>
       </div>
-      <div class="about-text">
-        <h2>About Me</h2>
+    </article>
+
+
+    <!-- PROJECT 2: PROOFHIRE -->
+    <article class="project-card glass-card reveal">
+
+      <div class="project-visual proofhire-visual">
+        <img src="assets\proofhire.jpg"
+             alt="ProofHire recruitment dashboard"
+             style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
+
+        <span class="project-index">PROJECT / 02</span>
+        <span class="project-category">RECRUITMENT TECH</span>
+      </div>
+
+      <div class="project-content">
+        <div class="project-meta">
+          <span class="project-type">SAAS APPLICATION</span>
+          <i class="fas fa-arrow-up-right-from-square"></i>
+        </div>
+
+        <h3>ProofHire</h3>
+
         <p>
-          Hi, I’m Boora Rishi Raj. I’m passionate about creating clean and user-friendly 
-          web applications. With experience in modern frontend technologies, I love 
-          transforming ideas into reality through code.
+          A recruitment SaaS application built around job and candidate
+          management, with Supabase authentication, a PostgreSQL data
+          layer, and Row Level Security policies for access control.
         </p>
+
+        <div class="tech-tags">
+          <span>React</span>
+          <span>TypeScript</span>
+          <span>Vite</span>
+          <span>Supabase Auth</span>
+          <span>PostgreSQL</span>
+          <span>RLS</span>
+        </div>
+
+        <span class="project-status">
+          <span class="status-dot"></span>
+          In Development
+        </span>
       </div>
-    </div>
-  </section>
+    </article>
 
-<!-- Skills Section -->
-<section class="skills" id="skills">
-  <h2>My Skills</h2>
-  <div class="skills-container">
-    <!-- Technical Skills -->
-    <ul class="skills-list">
-      <h3>Technical Skills</h3>
-      <li><i class="fas fa-check"></i> HTML5, CSS3</li>
-      <li><i class="fas fa-check"></i> C</li>
-      <li><i class="fas fa-check"></i> Data Structures</li>
-      <li><i class="fas fa-check"></i> MongoDB</li>
-      <li><i class="fas fa-check"></i> Responsive Web Design</li>
-    </ul>
 
-    <!-- Soft Skills -->
-    <ul class="skills-list">
-      <h3>Soft Skills</h3>
-      <li><i class="fas fa-check"></i> Communication</li>
-      <li><i class="fas fa-check"></i> Teamwork</li>
-      <li><i class="fas fa-check"></i> Problem Solving</li>
-      <li><i class="fas fa-check"></i> Adaptability</li>
-      <li><i class="fas fa-check"></i> Time Management</li>
-    </ul>
+    <!-- PROJECT 3: AI TRAVEL PLANNER -->
+    <article class="project-card glass-card reveal">
+
+      <div class="project-visual travel-visual">
+        <img src="assets\ai-travel-planner.jpg"
+             alt="AI travel planner with mountain destinations"
+             style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
+
+        <span class="project-index">PROJECT / 03</span>
+        <span class="project-category">GENERATIVE AI</span>
+      </div>
+
+      <div class="project-content">
+        <div class="project-meta">
+          <span class="project-type">TRAVEL PLANNING</span>
+          <i class="fas fa-arrow-up-right-from-square"></i>
+        </div>
+
+        <h3>AI Travel Planner for Students</h3>
+
+        <p>
+          An AI travel planning project focused on helping users explore
+          trip ideas and organize travel plans around their destinations
+          and preferences.
+        </p>
+
+        <div class="tech-tags">
+          <span>AI Travel Planning</span>
+          <span>Application Development</span>
+        </div>
+      </div>
+    </article>
+
+
+    <!-- PROJECT 4: BREAST CANCER DETECTION -->
+    <article class="project-card glass-card reveal">
+
+      <div class="project-visual cancer-visual">
+        <img src="assets\breast-cancer-detection.jpg"
+             alt="Breast cancer detection machine learning visualization"
+             style="width:100%;height:100%;object-fit:cover;display:block;border-radius:inherit;">
+
+        <span class="project-index">PROJECT / 04</span>
+        <span class="project-category">MACHINE LEARNING</span>
+      </div>
+
+      <div class="project-content">
+        <div class="project-meta">
+          <span class="project-type">CLASSIFICATION MODEL</span>
+          <i class="fas fa-arrow-up-right-from-square"></i>
+        </div>
+
+        <h3>Breast Cancer Detection</h3>
+
+        <p>
+          A Logistic Regression classification project using medical
+          dataset features to distinguish malignant from benign tumors.
+          Reported model accuracy: <strong>97%</strong>. The project
+          focuses on data-driven analysis of a substantial dataset.
+        </p>
+
+        <div class="tech-tags">
+          <span>Python</span>
+          <span>Logistic Regression</span>
+          <span>Machine Learning</span>
+          <span>Big Data Analysis</span>
+        </div>
+      </div>
+    </article>
+
   </div>
 </section>
 
-  <!-- Projects Section -->
-  <section class="projects" id="projects">
-    <h2>Projects</h2>
-    <div class="project-cards">
-      <div class="project-card">
-        <h2>Project 1</h2>
-        <h3>Personal Portfolio Website</h3>
-        <p>A modern, responsive portfolio website built with HTML, CSS, JavaScript, and GSAP animations. 
-    It showcases my skills, projects, resume, and contact information in a clean one-page design.</p>
+
+    <!-- RESUME -->
+    <section class="resume section-shell section-spacing" id="resume">
+
+      <div class="resume-panel glass-card reveal">
+
+        <div class="resume-decoration" aria-hidden="true">
+          <i class="fas fa-file-lines"></i>
+        </div>
+
+        <div class="resume-content">
+          <span class="section-kicker">04 / RESUME</span>
+          <h2>Let's talk about <span class="gradient-text">what's next.</span></h2>
+
+          <p>
+            Interested in my background, technical skills, and projects?
+            Take a look at my resume.
+          </p>
+
+          <a href="assets\Resume - Rishi Raj.pdf"
+            class="button button-primary"
+            download>
+            Download Resume <i class="fas fa-download"></i>
+          </a>
+        </div>
+
       </div>
-      <div class="project-card">
-        <h2>Project 2</h2>
-        <h3>Breast Cancer Detection Using LR</h3>
-        <p>A Machine Learning project that uses Logistic Regression to predict whether a tumor 
-    is malignant or benign based on medical data. Built with Python, Pandas, NumPy, and Scikit-learn.</p>
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact section-shell section-spacing" id="contact">
+
+      <div class="section-heading reveal">
+        <span class="section-kicker">05 / GET IN TOUCH</span>
+        <h2>Have an idea? <span class="gradient-text">Let's connect.</span></h2>
+        <p>Open to meaningful conversations about software, AI, and technology.</p>
       </div>
-    </div>
-  </section>
 
-  <!-- Resume Section -->
-  <section class="resume" id="resume">
-    <h2>My Resume</h2>
-    <p>You can download my resume here:</p>
-    <a href="assets/Rishi Raj Resume.pdf" download class="resume-btn">Download Resume
-      <i class="fas fa-download"></i>
-    </a>
-  </section>
+      <div class="contact-grid">
 
-  <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:rishiraj.boora1@gmail.com">rishiraj.boora1@gmail.com</a></p>
-    <p>Phone: +91 9866217209</p>
-    <div class="contact-icons">
-      <a href="http://www.linkedin.com/in/boora-rishiraj"><i class="fab fa-linkedin"></i></a>
-      <a href="https://wa.me/9866217209"><i class="fab fa-whatsapp"></i></a>
-      <a href="https://github.com/Rishi1930"><i class="fab fa-github"></i></a>
-    </div>
-  </section>
+        <a class="contact-card glass-card reveal"
+          href="mailto:rishiraj.boora1@gmail.com">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <span>EMAIL ME</span>
+          <strong>rishiraj.boora1@gmail.com</strong>
+          <i class="fas fa-arrow-up-right-from-square contact-arrow"></i>
+        </a>
 
-  <!-- Footer -->
+        <a class="contact-card glass-card reveal"
+          href="https://www.linkedin.com/in/boora-rishiraj"
+          target="_blank" rel="noopener noreferrer">
+          <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+          <span>CONNECT ON</span>
+          <strong>LinkedIn</strong>
+          <i class="fas fa-arrow-up-right-from-square contact-arrow"></i>
+        </a>
+
+        <a class="contact-card glass-card reveal"
+          href="https://wa.me/919866217209"
+          target="_blank" rel="noopener noreferrer">
+          <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+          <span>Send a Message</span>
+          <strong>Whatsapp</strong>
+          <i class="fas fa-arrow-up-right-from-square contact-arrow"></i>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2025 Boora Rishi Raj. All Rights Reserved.</p>
+    <a href="#hero" class="footer-logo">Rishi Raj Boora</a>
+
+    <p>Designed and built by Rishi Raj Boora.</p>
+
+    <a href="#hero" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
   </footer>
 
-  <!-- Custom JS -->
-  <script src="script.js"></script>
 </body>
-<script>
-  const menuToggle = document.getElementById("menu-toggle");
-  const nav = document.getElementById("nav");
-
-  menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("show");
-  });
-</script>
 </html>
